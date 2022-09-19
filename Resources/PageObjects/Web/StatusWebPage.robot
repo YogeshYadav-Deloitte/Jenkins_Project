@@ -57,10 +57,6 @@ Select Create new option and add a channel
     SeleniumLibrary.click element                                ${channel_option}
     SeleniumLibrary.input text                                   ${channel_name_box}            ${NEW_CHANNEL_NAME}
     SeleniumLibrary.Double click element                         ${create_button}
-    @{buttons}         SeleniumLibrary.Get WebElements          ${buttons_list}
-    FOR    ${button}    IN          @{buttons}
-        SeleniumLibrary.ELEMENT SHOULD BE ENABLED       ${button}
-    END
     sleep       2s
 
 Check if the channel is created or not
