@@ -15,7 +15,10 @@ class Teams():
         if longname == "Suites":
             return
 
-        teams_channel = os.environ['WEBHOOK_URL'].strip()
+        # teams_channel = os.environ['WEBHOOK_URL'].strip()
+        teams_channel = "https://deloitte.webhook.office.com/webhookb2/a64d402f-8592-445b-9bbb-82c41515a31b@36da45f1-dd2c-4d1f-af13-5abe46b99921/JenkinsCI/abb8ebad71d5486ca40bf876d23ae09a/2280fbe7-60cf-4d35-b791-c2aa20d5a376"
+
+
         # return if channel is empty
         if not teams_channel:
             return
