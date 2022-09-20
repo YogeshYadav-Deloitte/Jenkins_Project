@@ -23,7 +23,7 @@ pipeline {
                 }
                 // If the Build Fails this is executed
                 failure {
-                mail bcc: '', body: ' Failure Report', cc: 'yogeyadav@deloitte.com', from: '', replyTo: '', subject: '', to: 'amananand7@deloitte.com'
+                mail bcc: '', body: ' Failure Report', cc: 'yogeyadav@deloitte.com', from: '', replyTo: '', subject: 'Raja ji', to: 'amananand7@deloitte.com'
                 office365ConnectorSend webhookUrl: "https://teams.microsoft.com/l/team/19%3aqvIVNHZt9w83ssV81zzWhTq3sAjKqcdzCzBsEWibR2g1%40thread.tacv2/conversations?groupId=a64d402f-8592-445b-9bbb-82c41515a31b&tenantId=36da45f1-dd2c-4d1f-af13-5abe46b99921",
                 factDefinitions: [[name: "message", template: "Execution Failed"],
                                   [name: "Build Number", template: '$BUILD_NUMBER'],
@@ -33,7 +33,7 @@ pipeline {
                 }
                 // If the Build is Passed this is executed
                 success {
-                mail bcc: '', body: ' Success Report', cc: 'yogeyadav@deloitte.com', from: '', replyTo: '', subject: '', to: 'amananand7@deloitte.com'
+                mail bcc: '', body: ' Success Report', cc: 'yogeyadav@deloitte.com', from: '', replyTo: '', subject: 'Raja Ji', to: 'amananand7@deloitte.com'
                 office365ConnectorSend webhookUrl: "https://teams.microsoft.com/l/team/19%3aqvIVNHZt9w83ssV81zzWhTq3sAjKqcdzCzBsEWibR2g1%40thread.tacv2/conversations?groupId=a64d402f-8592-445b-9bbb-82c41515a31b&tenantId=36da45f1-dd2c-4d1f-af13-5abe46b99921",
                 factDefinitions: [[name: "message", template: "Execution Success"],
                                   [name: "Build Number", template: '$BUILD_NUMBER'],
