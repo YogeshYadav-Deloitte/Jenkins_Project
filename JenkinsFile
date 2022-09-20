@@ -8,10 +8,10 @@ pipeline {
                            System.setProperty("hudson.model.DirectoryBrowserSupport.CSP", "")
                            // Check the platform and runs the required command
                            if(isUnix()){
-                               sh (script:'robot -d Report Tests/Cloud',returnStatus:false)
+                               sh (script:'robot -d Report --listener Libraries/Teams.py Tests/Cloud',returnStatus:false)
                                 }
                            else {
-                                bat (script:'robot -d Report Tests/Cloud',returnStatus:false)
+                                bat (script:'robot -d Report --listener Libraries/Teams.py Tests/Cloud',returnStatus:false)
                                 }
                            }
                            }
