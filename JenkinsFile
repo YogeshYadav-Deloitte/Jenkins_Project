@@ -24,7 +24,7 @@ pipeline {
                 // If the Build Fails this is executed
                 failure {
                 mail bcc: '', body: ' Failure Report', cc: 'yogeyadav@deloitte.com', from: '', replyTo: '', subject: 'Raja ji', to: 'amananand7@deloitte.com'
-                office365ConnectorSend webhookUrl: "https://teams.microsoft.com/l/team/19%3aqvIVNHZt9w83ssV81zzWhTq3sAjKqcdzCzBsEWibR2g1%40thread.tacv2/conversations?groupId=a64d402f-8592-445b-9bbb-82c41515a31b&tenantId=36da45f1-dd2c-4d1f-af13-5abe46b99921",
+                office365ConnectorSend webhookUrl: "https://deloitte.webhook.office.com/webhookb2/a64d402f-8592-445b-9bbb-82c41515a31b@36da45f1-dd2c-4d1f-af13-5abe46b99921/JenkinsCI/b730e490cfad4cf59ba1a7f1575db6fe/2280fbe7-60cf-4d35-b791-c2aa20d5a376",
                 factDefinitions: [[name: "message", template: "Execution Failed"],
                                   [name: "Build Number", template: '$BUILD_NUMBER'],
                                   [name: "Job Name", template: '$JOB_NAME']],
@@ -34,7 +34,7 @@ pipeline {
                 // If the Build is Passed this is executed
                 success {
                 mail bcc: '', body: ' Success Report', cc: 'yogeyadav@deloitte.com', from: '', replyTo: '', subject: 'Raja Ji', to: 'amananand7@deloitte.com'
-                office365ConnectorSend webhookUrl: "https://teams.microsoft.com/l/team/19%3aqvIVNHZt9w83ssV81zzWhTq3sAjKqcdzCzBsEWibR2g1%40thread.tacv2/conversations?groupId=a64d402f-8592-445b-9bbb-82c41515a31b&tenantId=36da45f1-dd2c-4d1f-af13-5abe46b99921",
+                office365ConnectorSend webhookUrl: "https://deloitte.webhook.office.com/webhookb2/a64d402f-8592-445b-9bbb-82c41515a31b@36da45f1-dd2c-4d1f-af13-5abe46b99921/JenkinsCI/b730e490cfad4cf59ba1a7f1575db6fe/2280fbe7-60cf-4d35-b791-c2aa20d5a376",
                 factDefinitions: [[name: "message", template: "Execution Success"],
                                   [name: "Build Number", template: '$BUILD_NUMBER'],
                                   [name: "Job Name", template: '$JOB_NAME']],
