@@ -15,7 +15,7 @@ pipeline {
                            System.setProperty("hudson.model.DirectoryBrowserSupport.CSP", "")
                            // Check the platform and runs the required command
                            if(isUnix()){
-                               sh (script:'pip install -r requirements.txt',returnStatus:false)
+                               sh (script:'pip3 install -r requirements.txt',returnStatus:false)
                                sh (script:'$TestTypeRunning',returnStatus:false)
                                 }
                            else {
