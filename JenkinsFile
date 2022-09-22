@@ -19,7 +19,7 @@ pipeline {
                                  sh (script:'$TestTypeRunning',returnStatus:false)
                                 }
                            else {
-                                bat (script:'pip install -r requirements.txt',returnStatus:false)
+                            //    bat (script:'pip install -r requirements.txt',returnStatus:false)
                                 bat (script:'$TestTypeRunning',returnStatus:false)
                                 }
                            }
