@@ -20,7 +20,7 @@ pipeline {
                                 }
                            else {
                             //    bat (script:'pip install -r requirements.txt',returnStatus:false)
-                                bat (script:'$TestTypeRunning',returnStatus:false)
+                                bat (script:'robot -d Report --loglevel TRACE Tests/Cloud/Cloud.robot',returnStatus:false)
                                 }
                            }
                            }
