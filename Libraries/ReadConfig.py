@@ -43,7 +43,13 @@ chat_react_url = config.get("API_Links", "Chat_react_URL")
 
 
 # Cloud
-access_key = config.get("Browser_Stack","ACCESSKEY")
-username_cloud = config.get("Browser_Stack","USERNAME_CLOUD")
-device_name_Cloud = config.get("Browser_Stack","DEVICE_NAME_CLOUD")
-app_id_cloud = config.get("Browser_Stack","APP_ID")
+# access_key = config.get("Browser_Stack","ACCESSKEY")
+# username_cloud = config.get("Browser_Stack","USERNAME_CLOUD")
+# device_name_Cloud = config.get("Browser_Stack","DEVICE_NAME_CLOUD")
+# app_id_cloud = config.get("Browser_Stack","APP_ID")
+
+
+access_key = os.environ['ACCESSKEY']
+username_cloud = os.environ['USERNAME_CLOUD']
+device_name_Cloud = os.environ['DEVICE_NAME_CLOUD']
+app_id_cloud = os.environ['APP_ID']
